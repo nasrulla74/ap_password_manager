@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="im30_form">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                        <div class="page position-fixed" t-attf-style="background-image:url('/ap_recruitment/static/img/emp-bus-spc-airports.jpg'); background-size:245mm 330mm; width:245mm; height:330mm;">
+<!--                        <div class="page" t-attf-style="background-image:url('/ap_recruitment/static/img/emp-bus-spc-airports.jpg'); background-size:195mm 282mm; width:195mm; height:282mm;">-->
+
+                        <div style="position:fixed; left: 127px; top: 275px;">
+                            <span>Valena International Airport</span>
+                            <t t-if="o.visa_type == 'work'">
+                                <span style="position:fixed; left: 388px; top: 275px;">X</span>
+                            </t>
+                             <t t-if="o.visa_type == 'business'">
+                                <span style="position:fixed; left: 461px; top: 275px;">X</span>
+                            </t>
+                            <t t-if="o.visa_type == 'special'">
+                                <span style="position:fixed; left: 550px; top: 275px;">X</span>
+                            </t>
+
+                        </div>
+
+                        <div style="position:fixed; left: 188px; top: 327px;">
+                            <span class="text-uppercase text-nowrap" style="letter-spacing: .1rem;"><t t-esc="o.partner_name"/></span>
+                        </div>
+
+                        <t t-if="o.birth_date">
+                              <div style="position:fixed; left: 158px; top: 365px;">
+                                    <span style="letter-spacing: .4rem;" t-esc="o.birth_date.strftime('%d')" />
+                              </div>
+
+                                <div style="position:fixed; left: 194px; top: 365px;">
+                                    <span style="letter-spacing: .4rem;" t-esc="o.birth_date.strftime('%m')" />
+                                </div>
+
+                                <div style="position:fixed; left: 229px; top: 365px;">
+                                    <span style="letter-spacing: .3rem;" t-esc="o.birth_date.strftime('%Y')" />
+                                </div>
+                        </t>
+
+
+                        <div style="position:fixed; left: 350px; top: 365px;">
+                            <span class="text-uppercase" style="letter-spacing: .1rem;" t-esc="o.gender" />
+                        </div>
+
+                        <div style="position:fixed; left: 495px; top: 365px;">
+                            <span class="text-uppercase text-nowrap" style="letter-spacing: .1rem;" t-esc="o.nationality" />
+                        </div>
+
+                        <t t-if="o.is_married == 'yes'">
+                            <div style="position:fixed; left: 760px; top: 365px;">
+                                    <span>X</span>
+                            </div>
+                        </t>
+
+                        <t t-if="o.is_married == 'no'">
+                            <div style="position:fixed; left: 827px; top: 365px;">
+                                    <span>X</span>
+                            </div>
+                        </t>
+
+
+                        <t t-if="o.pp_expiry">
+                            <div style="position:fixed; left: 470px; top: 405px;">
+                                <span style="letter-spacing: .4rem;" t-esc="o.pp_expiry.strftime('%d')" />
+                            </div>
+
+                            <div style="position:fixed; left: 506px; top: 405px;">
+                                <span style="letter-spacing: .4rem;" t-esc="o.pp_expiry.strftime('%m')" />
+                            </div>
+
+                            <div style="position:fixed; left: 540px; top: 405px;">
+                                <span style="letter-spacing: .3rem;" t-esc="o.pp_expiry.strftime('%Y')" />
+                            </div>
+                        </t>
+
+                        <div style="position:fixed; left: 188px; top: 407px;">
+                            <span style="letter-spacing: .1rem;" t-esc="o.passport_number" />
+                        </div>
+
+
+                        <div style="position:fixed; left: 180px; top: 485px;">
+                            <span class="text-uppercase text-nowrap" style="letter-spacing: .1rem;" t-esc="o.visa_type" />
+                        </div>
+
+                        <div style="position:fixed; left: 540px; top: 483px;">
+<!--                            <span class="text-uppercase text-nowrap" t-esc="o.work_site_id.name" />-->
+                            <span style="font-size: 13px;" t-esc="o.work_site_id.name"/>
+                        </div>
+                            <div style="position:fixed; left: 540px; top: 495px;">
+<!--                            <span class="text-uppercase text-nowrap" t-esc="o.work_site_id.name" />-->
+                            <span class="text-nowrap" style="font-size: 12px;" t-esc="o.work_site_id.address" />
+                        </div>
+
+
+                        <div style="position:fixed; left: 190px; top: 525px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.current_address" />
+                        </div>
+
+                        <div style="position:fixed; left: 190px; top: 610px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.mobile_number" />
+                        </div>
+
+<!--                        <t t-if="o.partner_id.is_company">-->
+<!--                            <div style="position:fixed; left: 195px; top: 1010px;">-->
+<!--                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />-->
+<!--                            </div>-->
+<!--                        </t>-->
+                            <t>
+                            <div style="position:fixed; left: 195px; top: 1010px;">
+                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />
+                            </div>
+                        </t>
+                        <div style="position:fixed; left: 725px; top: 1015px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.vat" />
+                        </div>
+
+                        <div style="position:fixed; left: 195px; top: 1043px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.sponsor_name" />
+                        </div>
+
+                            <div style="position:fixed; left: 180px; top: 1078px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.sponsor_position" />
+                        </div>
+                            <div style="position:fixed; left: 610px; top: 1058px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.mobile" />
+                        </div>
+
+                            <t t-if="o.apply_date">
+                                <div style="position:fixed; left: 560px; top: 1171px;">
+                                    <span style="letter-spacing: .4rem;" t-esc="o.apply_date.strftime('%d')" />
+                                </div>
+
+                                <div style="position:fixed; left: 598px; top: 1171px;">
+                                    <span style="letter-spacing: .4rem;" t-esc="o.apply_date.strftime('%m')" />
+                                </div>
+
+                                <div style="position:fixed; left: 636px; top: 1171px;">
+                                    <span style="letter-spacing: .4rem;" t-esc="o.apply_date.strftime('%Y')" />
+                                </div>
+                        </t>
+                            <div style="position:fixed; left: 710px; top: 1070px;">
+                                <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>
+                            </div>
+                            <div style="position:fixed; left: 610px; top: 1050px;">
+                                <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                            </div>
+
+
+                       </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+</odoo>

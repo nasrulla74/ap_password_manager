@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="insurance_request">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                        <div class="page position-fixed" t-attf-style="background-image:url('/ap_recruitment/static/img/insurance_form.jpg'); background-size:245mm 330mm; width:245mm; height:330mm;">
+<!--                        <div class="page" t-attf-style="background-image:url('/ap_recruitment/static/img/emp-bus-spc-airports.jpg'); background-size:195mm 282mm; width:195mm; height:282mm;">-->
+
+
+                            <div style="position:fixed; left: 135px; top: 230px;">
+                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />
+                            </div>
+
+
+                            <div style="position:fixed; left: 700px; top: 230px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.vat" />
+                        </div>
+
+                        <div style="position:fixed; left: 135px; top: 275px;">
+                            <t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/> <t class="text-nowrap" t-esc="o.partner_id.city"/>
+                        </div>
+
+                            <div style="position:fixed; left: 840px; top: 275px;">
+                            <span>1</span>
+                        </div>
+
+                        <div style="position:fixed; left: 150px; top: 305px;">
+                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.mobile" />
+                        </div>
+
+                             <div style="position:fixed; left: 520px; top: 305px;">
+                            <span class="text-nowrap" t-esc="o.partner_id.email" />
+                        </div>
+                            <div style="position:fixed; left: 87px; top: 388px;">
+                            <span>X</span>
+                        </div>
+
+
+
+                        <div style="position:fixed; left: 100px; top: 600px;">
+                            <span class="text-nowrap" style="font-size: 16px;" t-esc="o.short_name" />
+                        </div>
+
+                        <div style="position:fixed; left: 440px; top: 600px;">
+                            <span style="font-size: 16px;" t-esc="o.passport_number" />
+                        </div>
+
+                        <t t-if="o.wp_number">
+                            <div style="position:fixed; left: 535px; top: 600px;">
+                                <span style="font-size: 16px;" t-esc="o.wp_number[-8:]"/>
+                            </div>
+                        </t>
+
+
+
+
+
+                        <t t-if="o.birth_date">
+                              <div style="position:fixed; left: 625px; top: 600px;">
+                                    <span style="font-size: 16px;" t-esc="o.birth_date.strftime('%d-%m-%y')" />
+                              </div>
+                        </t>
+                        <div style="position:fixed; left: 720px; top: 600px;">
+                            <span class="text-nowrap" style="letter-spacing: .1rem;" t-esc="o.nationality" />
+                        </div>
+
+
+                                <div style="position:fixed; left: 625px; top: 980px;">
+                                    <span t-esc="datetime.datetime.now().strftime('%d-%m-%Y')"></span>
+                                </div>
+<!--                            <div style="position:fixed; left: 400px; top: 900px;">-->
+<!--                                <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>-->
+<!--                            </div>-->
+                            <div style="position:fixed; left: 300px; top: 930px;">
+                                <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                            </div>
+
+
+                       </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+</odoo>

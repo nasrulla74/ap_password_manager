@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="srilankan_embassy_company_agreement">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <p>
+                        This Employment contract executed and entered into by and between <t t-esc="o.partner_id.name"/> - <t t-esc="o.partner_id.vat"/>
+                        (Employer) of <t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/>
+                                    <t t-esc="o.partner_id.zip"/> <t t-esc="o.partner_id.city"/>.
+                        Hereinafter referred to as Employer and <span class="text-uppercase"><t t-esc="o.person_title"/>.</span> <t t-esc="o.partner_name"/>
+(Employee) of <t t-esc="o.permanent_address"/> Citizens of Sri Lanka, hereinafter referred to as Employee, provides for the terms and conditions of employment, as follows:
+
+                    </p>
+                    <h6><strong>A. <span class="px-4">Particulars of Employee</span></strong></h6>
+
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  Full Name as in the Passport:
+                                                </td>
+                                                <td>
+                                                    <span><t t-esc="o.partner_name"/></span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                 <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  Passport No: <span><t t-esc="o.passport_number"/></span>
+                                                </td>
+
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    3.  Date of Issue: <span t-esc="o.pp_issue.strftime('%d-%b-%Y')"></span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    4.  Place of Issue: <span><t t-esc="o.pp_place_issue"/></span>
+                                                </td>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    5.  Profession in Passport: <span><t t-esc="o.pp_profession"/></span>
+                                                </td>
+
+                                            </tr>
+                                        </tbody></table>
+
+
+
+
+                    </div>
+
+                    <h6 class="mt-3"><strong>B.	<span class="px-4">Basic Terms:</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2" style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  Employment Site: <span class="px-4"><t t-esc="o.work_site_id.name"/></span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                 <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  Employee’s Classification: <span></span>
+                                                </td>
+
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    Position or Grade: <span><t t-esc="o.xpat_position"/></span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    3.  Basic Pay: <span><t t-esc="o.remuneration"/></span>
+                                                </td>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    4.  No of Hours Work Per Day: <span>8 Hours</span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    5.  No of Working Hours per Week: 48 Hours
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    6.  Overtime Pay:
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="py-1 px-2">a) For work over regular hours: Not Applicable</li>
+                                                        <li class="py-1 px-2">b) For work on Holidays: Not Applicable</li>
+
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding-left: 5px; padding-right: 5px;">
+                                                    7.  Leave with Full Pay (per contractual year of 12 months):
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    <ul style="list-style-type: none;">
+                                                        <li class="py-1 px-2">a) Vacation : 30 days with return ticket.</li>
+                                                        <li class="py-1 px-2">b) Sick Leave: 10 Days</li>
+
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" style="padding-left: 5px; padding-right: 5px;">
+                                                    <span>
+                                                    8.  Duration of contract: 2 Years from date of arrival in the country of employment Contact is renewal at the option of both parties.
+                                                    </span>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding-left: 5px; padding-right: 5px;">
+                                                    <span>
+                                                    9.  Other benefits:
+                                                     </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    <span><t t-esc="o.other_benefits"/></span>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+
+                    </div>
+
+                    <h6 class="mt-3"><strong>C.	<span class="px-4">The Employer shall provide the Employee</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  Free Air-ticket to Colombo/Male’ at beginning of contract.
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                 <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  Free return air-ticket to Colombo in the following case:
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                 <td class="py-1">
+                                                     <ul style="list-style-type: none;">
+                                                        <li>a) Expiration of contract.</li>
+                                                        <li>b) Termination of contract of employer without just causes.</li>
+                                                        <li>c) If employee is unable to continue work due to work connected diseases or injury.</li>
+                                                        <li>d) Force Majuro: and</li>
+                                                        <li>e) In such other case when contract is terminated through no fault or Employee.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    3.  Free Food
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    4.  Free accommodation with living facilities
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    5.  Free Emergency Medical Attention and Medicines.
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    6.  Workmen’s Compensation Benefits for service connected illness, injury or death, according to laws of the Republic of Maldives and war hazard protection.
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    7.  Company benefits provided to other Employees in same work.
+                                                </td>
+                                            </tr>
+                                   </tbody></table>
+                    </div>
+
+                     <p class="mt-3">D.	<span class="px-4">The employee shall observe Employer’s company rules and abide by the pertinent laws of the Republic of Maldives.</span></p>
+                     <p class="mt-3">E.	<span class="px-4">The Employer shall assist the Employee in the regular remittance of his monthly salary and allowance or any portion of them, as the employee may decide, to his/her beneficiaries in Sri Lanka Bureau of Foreign Employment/ Embassy of Sri Lanka in the Republic of Maldives, if requested.</span></p>
+                    <h6 class="mt-3"><strong>F.	<span class="px-4">In the case of death:</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  In the case of death the employee or employees during the contract period the employer shall agree to repatriation of the remaining of the deceased along with the personal effects and savings on the expenses of the employer, and with the payment of compensation.
+                                                </td>
+                                            </tr>
+
+                                   </tbody></table>
+                    </div>
+
+                    <h6 class="mt-3"><strong>G.	<span class="px-4">Compensations:</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  The employer shall ensure that the personal life and accident insurance for the employee to be provided for work connected illness, injuries or death in accordance with the pertinent laws of the Republic of Maldives.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                 <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  The employer shall ensure that the personal life and accident insurance for the employee to be provided for work connected illness, injuries or death in accordance with the pertinent laws of the Republic of Maldives
+                                                </td>
+                                            </tr>
+
+                                   </tbody></table>
+                    </div>
+
+                    <h6 class="mt-3"><strong>H.	<span class="px-4">Termination of Contract of employee by employer</span></strong></h6>
+                    <h6 class="mt-3"><strong><span class="px-4">Employer may terminate the contract of the employee for any of the following just causes:</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  The closing or cessation of operation of the establishments or completion of the project.
+                                                </td>
+
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  Serious misconduct or willful disobedience of lawful order of employer or his representative at work.
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    3.  Gross or habitual or willful neglect of duties.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    4.  Fraud, criminal offence or assault by employee of employer, his representative or a fellow worker.
+                                                </td>
+                                            </tr>
+
+
+                                   </tbody></table>
+                    </div>
+                    <h6 class="mt-3"><strong>I.    <span class="px-4">Employer may also terminate contract of Employee in the following circumstances:</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  Installation of labour saving devices
+                                                </td>
+
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  Redundancy
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    3.  Retrenchment to reduce or prevent losses, and
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    4.  If Employee has been found to be suffering from any disease and whose continued employment is prohibited by law or is determined to his health and/or that of his co-employees.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    The termination of employment due to installation of Labour saving devices, reluctantly or retrenchment shall entitle
+        the employee affected thereby to repatriation pay equivalent to one (1)month pay or at least one month (1) month pay
+        for every year of service, which is higher fraction of an year and all other benefits granted to those who may be
+       terminated at end of contract through the normal termination process
+                                                </td>
+                                            </tr>
+
+
+                                   </tbody></table>
+                    </div>
+                    <h6 class="mt-3"><strong>J.    <span class="px-4">Termination of Employment by Employee</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    1.  An employee may terminate the employer-employee relationship before the expiration of the Employment Contract, by serving written notice on the Employer at least one (1) month in advance. The Employer upon whom no such notice has been served may hold the employee liable for damages. The return airfare in these shall be borne by the employee.
+                                                </td>
+
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    2.  An Employee may put end to the relationship without serving any notice on the employer for any of the following just causes:
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    a)	Serious insult by the employer or his representative on the honour and person of the employee
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    a)	Serious insult by the employer or his representative on the honour and person of the employee
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    b)	Inhuman and unbearable treatment accorded the Employee by the employer or his representative
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    c)	Commission of a crime or offense by the Employer or his representative against the person the employee or any of the immediate members of his family.
+                                                </td>
+                                            </tr>
+
+
+
+                                   </tbody></table>
+                    </div>
+                    <h6 class="mt-3"><strong>K.    <span class="px-4">Dispute Settlement procedures</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    All disputes arising from the employment contract shall initially be settled amicably through negotiations, with the participation of either a Sri Lankan Embassy representative or any representative of the Sri Lankan Bureau of Foreign Employment.
+                                                </td>
+
+                                            </tr>
+                                             <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    If attempts at amicable settlement fail agreed parties shall have recourse to laws in effect in the country of employment.
+                                                </td>
+                                            </tr>
+                                   </tbody></table>
+                    </div>
+                    <h6 class="mt-3"><strong>L.    <span class="px-4">Applicable Laws</span></strong></h6>
+                    <div class="mt-2">
+                                    <table class="mt-0 table-borderless mx-5">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-left: 5px; padding-right: 5px;">
+                                                    Other terms and conditions of employment not covered herein shall be governed by the pertinent laws of the Republic of Maldives without negating and rendering nugatory other applicable laws in Sri Lanka international covenants on expatriate employment. In this event of disputes arising out of the interpretation of this agreement the English version of the document shall prevail.
+                                                </td>
+
+                                            </tr>
+
+                                   </tbody></table>
+                    </div>
+
+                <p class="mt-3">
+                    <strong>I WITNESS WHEREOF </strong> the parties having read and understood all the provision of the Agreement hereby freely manifest therein full acceptance of the terms and conditions embodied herein by signing this contract this
+                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')" /> day of <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%B')" /> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')" />. at 11:35 AM
+                </p>
+
+
+
+
+
+                <div>
+
+                 <table class="mt-0 table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1">
+                                    <t t-esc="o.partner_id.name"/>
+                                </td>
+                                <td class="px-3 py-1">
+                                    <t t-esc="o.partner_name"/> / <t t-esc="o.passport_number"/>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="pt-5 px-3 pb-2">
+                                    Name, designation and Signature of Employer and company seal
+                                </td>
+                                <td class="pt-5 px-3 pb-2">Employee</td>
+                            </tr>
+                        </tbody>
+                 </table>
+
+                    <p>
+                       I registered at the Embassy of the Democratic Socialist Republic of Sri Lanka in the Republic of Maldives.
+                    </p>
+                    <p class="mt-5">Registration No: ............................................... Date of Registration: ...........................................</p>
+                    <p>Signature of Authorized Officer.............................................of Embassy of Sri Lanka.</p>
+
+                </div>
+
+
+                </t>
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="offer_letter">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                       <div class="page">
+
+                         <img t-if="o.partner_id.customer_header" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_header.decode('utf-8')"/>
+
+                           <h6 class="text-decoration-underline py-3" style="text-align:center; font-size: 24px;">OFFER LETTER</h6>
+
+
+
+                           <p class="text-decoration-underline mt-3">Details of the Employee</p>
+                                <table class="mt-0 table-borderless">
+
+                                  <tbody>
+                                    <tr>
+                                      <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
+                                      <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_name"/></td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Permanent Address:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.permanent_address"/></td>
+                                    </tr>
+
+                                       <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Current Address:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.current_address"/></td>
+                                    </tr>
+
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Mobile Number:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.mobile_number"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Passport Number:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.passport_number"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Nationality:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.nationality"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Date of Birth:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><span t-esc="o.birth_date.strftime('%d-%b-%Y')"/></td>
+                                    </tr>
+
+
+                                  </tbody>
+                                </table>
+
+                           <p class="text-decoration-underline mt-3">Details of Employment</p>
+                                <table class="mt-0 table-borderless">
+
+                                  <tbody>
+
+
+                                    <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Title/Position/Occupation:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.xpat_position"/></td>
+                                    </tr>
+
+                                       <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Work Site:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.work_site_id.name"/></td>
+                                    </tr>
+
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Work Site Address:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.work_site_id.address"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Remuneration/Salary:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.remuneration"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Other Benefits:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.other_benefits"/></td>
+                                    </tr>
+                                      <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Working Hours:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.working_hours"/></td>
+                                    </tr><tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Date of Salary Payment:</td>
+                                      <td class="py-1" style="width:900pt;font-size: 17px;" valign="left"><t t-esc="o.salary_payment"/></td>
+                                    </tr>
+
+
+                                  </tbody>
+                                </table>
+
+                           <p class="text-decoration-underline mt-3">Details of Signee</p>
+                                <table class="mt-0 table-borderless">
+
+                                  <tbody>
+                                    <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Employer/Sponsor: <t t-esc="o.sponsor_name"/></td>
+                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Name of Employee: <t t-esc="o.partner_name"/></td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Designation: <t t-esc="o.sponsor_position"/></td>
+
+                                    </tr>
+
+                                       <tr>
+                                      <td class="py-4" style="width:700pt;font-size: 17px;" valign="center">Signature/Stamp:
+                                        <div style="position:fixed; left: 270px; top: 1100px;">
+                                            <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>
+                                        </div>
+                                        <div style="position:fixed; left: 170px; top: 1080px;">
+                                            <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                                        </div>
+<!--                                       <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>-->
+<!--                                       <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>-->
+
+                                      </td>
+                                        <td class="py-1" style="width:900pt;" valign="center">Signature: </td>
+                                    </tr>
+
+                                      <tr>
+
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Date: <span t-esc="o.apply_date.strftime('%d-%b-%Y')"/></td>
+                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Date: <span>________________</span></td>
+                                    </tr>
+
+
+                                  </tbody>
+                                </table>
+                            <p class="mt-4">
+                              Please indicate your acceptance of this offer by signing and returning a copy of this letter to process work permit.
+                            </p>
+                       </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+</odoo>

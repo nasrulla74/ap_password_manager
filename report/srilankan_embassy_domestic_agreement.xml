@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="srilankan_embassy_domestic_agreement">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <h2 style="text-align:center;">Employment Contract for Domestic workers</h2>
+                    <h3 style="text-align:center;">(Maldives)</h3>
+                    <h5 style="text-align:center;">(House Drivers, House Maids, House Boys etc...)</h5>
+
+                    <table class="mt-0 table-borderless" style="font-size: 20px !important;">
+                        <tbody>
+                            <tr>
+                                <td class="pt-4 text-decoration-underline text-nowrap py-1 mt-2" style="font-size: 17px;"  valign="center">DETAILS OF THE EMPLOYER</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Address:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/>
+                                    <t t-esc="o.partner_id.zip"/> <t t-esc="o.partner_id.city"/></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Id Card No/PPT No:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left">
+                                    <t t-esc="o.partner_id.vat"/>
+
+                                </td>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Tel No:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.mobile"/></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-decoration-underline text-nowrap py-1 pt-4" style="width:700pt; font-size: 17px;"  valign="center">DETAILS OF THE EMPLOYEE</td>
+
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_name"/></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Permanent Address:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left">
+                                    <t t-esc="o.permanent_address"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Id Card No/PPT No:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.passport_number"/></td>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Nationality:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.nationality"/></td>
+
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Date of Birth:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left">
+
+                                    Day: <span t-esc="o.birth_date.strftime('%d')"></span>
+                                    Month: <span t-esc="o.birth_date.strftime('%b')"></span>
+                                    Year: <span t-esc="o.birth_date.strftime('%Y')"></span>
+
+
+                                </td>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Tel No:</td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.mobile_number"/></td>
+                            </tr>
+
+
+<!--                            <tr>-->
+<!--                                <td class="text-decoration-underline text-nowrap py-1 mt-2" style="width:700pt; font-size: 17px;"  valign="center">DETAILS OF THE EMPLOYMENT</td>-->
+
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td class="py-1 text-nowrap" valign="left">-->
+
+<!--                                        Title or work assigned: <t t-esc="o.xpat_position"/> Place of work: <t t-esc="o.work_site_id.name"/>-->
+<!--                                        <t t-esc="o.work_site_id.address"/>-->
+<!--                                </td>-->
+
+
+
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                 <td class="py-1 text-nowrap"  valign="left">-->
+<!--                                 The agreement made and entered into on this 13th (day) of January (month) 2024 (year) between-->
+
+<!--                                </td>-->
+
+<!--                            </tr>-->
+
+
+                        </tbody>
+                    </table>
+
+             <table class="mt-0 table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="mt-4 text-decoration-underline text-nowrap py-1 pt-4" style="font-size: 17px;"  valign="center">DETAILS OF THE EMPLOYMENT</td>
+                            </tr>
+                                                        <tr>
+                                <td class="py-1" valign="left">
+
+                                        Title or work assigned: <t t-esc="o.xpat_position"/> Place of work: <t t-esc="o.work_site_id.name"/>
+                                        <t t-esc="o.work_site_id.address"/>
+                                </td>
+
+
+
+                            </tr>
+                            <tr>
+                                 <td class="py-1 text-nowrap"  valign="left">
+                                 This agreement made and entered into on this
+
+
+                                     (day): <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')" />
+                                     of <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%B')"/>
+                                    (month): <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                     (year) between
+
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="py-1"  valign="left">
+                                <t t-esc="o.partner_id.name"/> address is <span><t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/>
+                                    <t t-esc="o.partner_id.zip"/> <t t-esc="o.partner_id.city"/></span> Tel No: <span><t t-esc="o.partner_id.mobile"/></span>
+                                Holder of passport no/Id. No: <span><t t-esc="o.partner_id.vat"/></span> (herein after called the Employer) and <span><t t-esc="o.partner_name"/></span>
+                                (herein after called the Employee) with residence at <span><t t-esc="o.permanent_address"/></span> holder of Passport No: <span><t t-esc="o.passport_number"/></span>
+                                And registered at the High Commission/ Consulate of the Democratic Socialist Republic of Sri Lanka in the Republic of Maldives.
+
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+             </table>
+
+
+
+
+                <div class="mt-4">
+
+                                <ol class="list-group list-group-light list-group-numbered">
+                                  <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Duration of Agreement</div>
+                                        <ul>
+                                              <li class="py-1">a) The Employee shall be employed by the employer for a period of One Year(s) commencing on the day of arrival
+                                            at his/her destination in the Republic of Maldives.</li>
+                                              <li>b) Upon completion of this contract the employer shall provide a free air ticket for the employee for his/her return
+                                            to Sri Lanka and also pay the employee a gratuity no less than one month's salary</li>
+                                        </ul>
+                                    </div>
+
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Duties of the Employee</div>
+                                      <ul>
+                                              <li  class="py-1">a)	The employee shall discharge his/her duties diligently and faithfully for the duration of his/her engagement in terms of clause 1. He/she all also respect the customs traditions of the country and display a good standard of behavior and respect for members of the household.</li>
+                                              <li  class="py-1">b)	The employee shall reside in the residence of the employer and shall be required to perform the normal duties
+                                                            assigned.
+                                                </li>
+                                        </ul>
+                                    </div>
+
+                                  </li>
+                                  <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Duties of the Employer</div>
+                                      <ul>
+                                              <li class="py-1">a)	The employer shall pay at the rate of <span><t t-esc="o.remuneration"/></span>	per month to the employee as salary'. Payment
+                                                        shall be made in within 7 (seven) days following each month.
+                                                </li>
+                                              <li class="py-1">b)	Employee shall give and employer shall obtain written acknowledgments in respect of all payments made to
+                                                        the employee by the employer.
+
+                                                </li>
+                                        </ul>
+                                    </div>
+
+                                  </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+
+                                      The employee's duty hours will not exceed 08 (eight) staggered hours a day and the Employee will be treated as a
+member of the household.
+
+                                    </div>
+
+                                  </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Rest Day</div>
+                                              The employer shall provide the employee a weekly day off as determined by the Employer.
+                                    </div>
+
+                                  </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Transportation</div>
+                                              The employer shall provide the employee with an air ticket from Colombo to Male to enable him/her assume duties.
+                                    </div>
+                                    </li>
+                                     <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Free Food lodging and Medical Care </div>
+                                              The Employer shall provide free accommodation, food and medical care.
+                                    </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                        <p>.</p>
+                                    <div class="ms-2 me-auto">
+
+                                      <div class="fw-bold">Temination of Agreement</div>
+                                        <ul>
+                                              <li class="py-1">a)	The employer shall give one month's notice to the employee is he/she proposes to terminate the Agreement before it's expiry or pay month's salary lieu of notice.
+                                                </li>
+                                              <li class="py-1">b)	The employee shall give one month's notice if he/she proposes to terminate the Agreement before its expiry.
+
+                                                </li>
+                                            <li>
+                                                c)    Not withstanding provision in (a) and (b) above, the employer may terminate the Agreement without notice or
+payment of one month's salary to the employee if He/she:
+
+                                                <ul>
+                                                    <li class="py-1">i) Willfully refuses to carry out duties assigned to him/her</li>
+                                                    <li class="py-1">ii) Commits misconduct of such misconduct inconsistent with the due and faithful discharge of
+duties</li>
+                                                    <li class="py-1">iii) ls guilty of fraud and dishonesty.</li>
+                                                    <li class="py-1">
+                                                        iv) Habitually neglects his/her duties.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                d) The Employee may terminate the Agreement without notice if:
+                                                <ul>
+                                                    <li class="py-1">i) He/She has reasonable fear that he/she may be exposed to danger due to her civil
+commotion, disease etc ...</li>
+                                                    <li class="py-1">ii) He/she is subjected ill-treatment by thc employer</li>
+                                                    <li class="py-1">iii) He/she is subjected to sexual harassment.</li>
+                                                    <li class="py-1">iv) Non payment of monthly salary stated in clausc 3.</li>
+                                                    <li class="py-1">The employer shall provide an air ticket to the employee to return to Sri Liu*a if He/she terminates the Agreement due
+to reasons stated in clause 8(d) I to IV.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                e) Before proceeding with the termination of the Agreement the Employee and or Employer should in the first
+instance report the matter to the Sri Lanka Embassy/consulate and seek a settlement of the dispute through
+conciliation. The parties shall abide by such terms of settlement reached through a Labour Attache or an authorized
+officer in the Sri Lanka Embassy/Consulate.
+                                            </li>
+
+
+
+                                        </ul>
+                                    </div>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">In the case of Death</div>
+                                              <ul>
+                                                  <li class="py-1">a) ln thc case of death of the employee during thc contract period. thc employer shall repatriate the remains of the
+deceased, along with the personal effects and savings at the expense of the employer.</li>
+
+                                              </ul>
+                                    </div>
+                                    </li>
+
+                                     <li class="list-group-item d-flex justify-content-between align-items-start pb-2">
+                                    <div class="ms-2 me-auto">
+                                      <div class="fw-bold">Compensations</div>
+                                              <ul>
+                                                  <li class="py-1">a) The employee shall ensure that the personal life and accident insurance for the employee to be provided for work
+connected illness, injuries or death in accordance with the pertinent laws of the host country.</li>
+                                                  <li class="py-1">b) During the course of the Employment. any accident or sudden death occurred to the Employee, the Employer is
+responsible to pay reasonable compensation when legal system is silence or not in active in the country where the
+employee is working.</li>
+
+                                              </ul>
+                                    </div>
+                                    </li>
+                                </ol>
+
+                </div>
+
+
+
+
+
+
+
+                <div>
+                    <p></p>
+                    <h5>Amendments</h5>
+                    <p>The provision of the Agreement shall be altered amended or substituted with the written approval of the Sri Lanka High
+Commission/Consulate.</p>
+
+                    <p>
+                        [WITNESS WHEREOF the parties having read and understood all the provision of the Agreement hereby freely
+manifest therein full acceptance of thc terms and conditions embodied herein by placing the respective signatures.
+                    </p>
+
+                 <table class="mt-0 table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1">
+                                    <t t-esc="o.partner_id.name"/>
+                                </td>
+                                <td class="px-3 py-1">
+                                    <t t-esc="o.partner_name"/> / <t t-esc="o.passport_number"/>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="pt-5 px-3 pb-2">
+                                    Name and Signature of Employer/Sponsor
+                                </td>
+                                <td class="pt-5 px-3 pb-2">Name, Signature and Passport No of Employee</td>
+                            </tr>
+                        </tbody>
+                 </table>
+
+                    <p>
+                       I registered at the High Commission/Consulate of the Democratic Socialist Republic of Sri Lanka in the Republic of
+Maldives.
+                    </p>
+                    <p class="mt-5">Registration No: ............................................... Date of Registration: ...........................................</p>
+                    <p>Signature of Labour Attache/Authorized Officer.............................................of Sri Lanka High Commission/Consulate.</p>
+
+                </div>
+
+
+                </t>
+            </t>
+
+
+
+
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <h3 style="text-align:center;">Personal Details : (Sponsor Type - Domestic)</h3>
+
+                   <table class="mt-0 mt-5 table-borderless">
+                        <tbody>
+                             <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Identity Number:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.vat"/></td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.name"/></td>
+                            </tr>
+                             <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Age:</td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left">Age</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Sex:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.gender"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Nationality:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.country_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Type of Occupation:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.x_occupation_type"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Occupation:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.function"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Monthly Income US$:</td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.x_monthly_income"/>
+                                </td>
+                            </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+
+
+
+
+                  <h3 class="mt-3">Contact Details</h3>
+                 <table class="mt-1 table-bordered table-fixed">
+                        <tbody>
+                            <tr>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                                <td class="p-3">Home</td>
+                                <td class="px-5">Office</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">Address</td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">PO Box</td>
+                                <td class="p-3"><t t-esc="o.partner_id.zip"/></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">House</td>
+                                <td class="p-3"><t t-esc="o.partner_id.street"/></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">Block</td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">Street</td>
+                                <td class="p-3"><t t-esc="o.partner_id.street2"/></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">Other</td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">City</td>
+                                <td class="p-3"><t t-esc="o.partner_id.city"/></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">Land</td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3"></td>
+                                <td class="p-3">Mobile</td>
+                                <td class="p-3"><t t-esc="o.partner_id.mobile"/></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3">Fax</td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr><tr>
+                                <td class="p-3">Email</td>
+                                <td class="p-3"><t t-esc="o.partner_id.email"/></td>
+                                <td class="p-3"></td>
+                                <td class="p-3"></td>
+                            </tr>
+
+
+                        </tbody>
+                 </table>
+
+
+
+
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="mnu_root_ap_pw_manager"
+              name="Password Manager"
+              parent=""
+              sequence="0"/>
+     <menuitem id="listmenu_ap_pw_manager"
+              name="Password Manager"
+              action="action_ap_pw_manager"
+              parent="mnu_root_ap_pw_manager"
+              sequence="200"/>
+
+   </odoo>
